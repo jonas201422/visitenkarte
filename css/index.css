@@ -1,0 +1,140 @@
+/* styles.css */
+
+@font-face {
+    font-family: 'Young';
+    src: url('YoungSerif-Regular.ttf') format('truetype'); /* Adjust the path if necessary */
+    /* Add more src declarations if your font has different formats */
+}
+
+body {
+    font-family: 'Young', sans-serif;
+    font-style: oblique;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header, nav, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 5em;
+    background-image: linear-gradient(to right, #1a0426, #184c83, #8018b5); /* Rainbow gradient */
+    background-clip: text;
+    -webkit-background-clip: text; /* For older browsers */
+    color: transparent;
+    margin: 5px 0;
+    text-align: center;
+}
+
+header p {
+    font-size: 2em;
+    color: #666;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.6em;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 8px;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
+.section .text {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #f0eded;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+    display: none;
+    transition: transform 0.2s;
+}
+
+.back-to-top::before {
+    content: '\2191'; /* Unicode up arrow character */
+    font-size: 30px;
+    color: #555;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: font-size 0.2s; 
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+}
+
+.back-to-top:hover::before {
+    font-size: 35px;
+}
